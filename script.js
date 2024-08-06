@@ -28,10 +28,24 @@ function getRandomCardAbility() {
     return cardAbilities[Math.floor(Math.random() * cardAbilities.length)];
 }
 
+// Function to adjust the font size based on the text length
+function adjustFontSize(textElement) {
+    let textLength = textElement.value.length;
+    if (textLength < 100) {
+        textElement.style.fontSize = "2em"; // Larger font for short text
+    } else if (textLength < 200) {
+        textElement.style.fontSize = "1.5em"; // Medium font for moderate text
+    } else {
+        textElement.style.fontSize = "1em"; // Smaller font for long text
+    }
+}
+
 // Function to generate and display a new card
 function generateNewCard() {
     document.getElementById("card-name").textContent = getRandomCardName();
-    document.getElementById("ability-text").value = getRandomCardAbility();
+    let abilityTextElement = document.getElementById("ability-text");
+    abilityTextElement.value = getRandomCardAbility();
+    adjustFontSize(abilityTextElement);
 }
 
 // Function to toggle fullscreen mode

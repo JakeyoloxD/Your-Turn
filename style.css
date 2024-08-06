@@ -46,6 +46,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative; /* Ensure relative positioning */
 }
 
 .textbox {
@@ -53,15 +54,20 @@ main {
     padding: 20px;
     text-align: center;
     width: 90%; /* Adjust to fit within viewport */
-    max-height: 1000%; /* Adjust based on preference */
+    height: 60%; /* Increase height to fill more of the screen */
     position: fixed; /* Fix position */
-    bottom: 80px; /* Adjust to move textbox up */
+    top: 20%; /* Adjust to move textbox up */
     left: 50%;
     transform: translateX(-50%); /* Center horizontally */
     box-sizing: border-box;
-    /* overflow-y: auto; Add scroll if content overflows */
     font-family: 'Beleren SmallCaps Bold', sans-serif;
     border-radius: 15px; /* Curved edges */
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    overflow: hidden; /* Prevent text from overflowing */
+    resize: none; /* Prevent manual resizing */
+    transition: font-size 0.2s; /* Smooth transition for font-size */
 }
 
 button {
@@ -72,15 +78,21 @@ button {
     font-family: 'Beleren SmallCaps Bold', sans-serif;
     border-radius: 15px; /* Curved edges */
     position: fixed; /* Fix position */
+    bottom: 20px; /* Move button up */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    width: 80%; /* Adjust width */
 }
 
 /* Media query for small screens (portrait mode on phones) */
 @media only screen and (max-width: 767px) {
+    .textbox {
+        width: 80%;
+        height: 60%; /* Adjust height for small screens */
+        top: 20%; /* Adjust to move textbox up */
+    }
+
     button {
-        position: fixed; /* Fix position */
-        bottom: 20px; /* Move button up */
-        left: 50%;
-        transform: translateX(-50%); /* Center horizontally */
         width: 80%; /* Adjust width */
     }
 }
@@ -90,15 +102,11 @@ button {
     .textbox {
         width: 80%;
         padding: 30px;
-        max-height: 50%; /* Adjust based on preference */
-        margin-bottom: 20px; /* Add some extra space between the textbox and button */
+        height: 60%; /* Adjust height */
+        top: 20%; /* Adjust to move textbox up */
     }
-    
+
     button {
-        position: fixed; /* Fix position */
-        bottom: 20px; /* Move button up */
-        left: 50%;
-        transform: translateX(-50%); /* Center horizontally */
         width: 80%; /* Adjust width */
     }
 }
@@ -106,26 +114,25 @@ button {
 @media only screen and (orientation: landscape) {
     .textbox {
         width: 70%;
-        margin-bottom: 30px; /* Increase the space between textbox and button in landscape mode */
+        height: 60%; /* Adjust height for landscape mode */
+        top: 20%; /* Adjust to move textbox up */
     }
+
     button {
-        position: fixed; /* Fix position */
-        bottom: 20px; /* Move button up */
-        left: 50%;
-        transform: translateX(-50%); /* Center horizontally */
         width: 80%; /* Adjust width */
     }
 }
+
 /* Media query for laptops/desktops and up */
 @media only screen and (min-width: 992px) {
     .textbox {
         width: 60%;
         padding: 30px;
-        max-height: 50%; /* Adjust based on preference */
+        height: 60%; /* Adjust height */
+        top: 20%; /* Adjust to move textbox up */
     }
 
     button {
-        
         font-size: 20px;
         padding: 14px 28px;
     }
