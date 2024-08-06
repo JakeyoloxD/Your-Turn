@@ -1,11 +1,3 @@
-#fullscreen-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    margin: 10px;
-    font-family: 'Beleren SmallCaps Bold', sans-serif;
-    border-radius: 15px;
-}
 /* Mobile first CSS */
 body {
     margin: 0;
@@ -37,7 +29,7 @@ header {
 header h1#card-name {
     font-family: 'Beleren SmallCaps Bold', sans-serif;
     margin: 0;
-    margin-top: 10px; /* Adjust to give more space for the header */
+    cursor: pointer; /* Indicates that it's clickable */
 }
 
 main {
@@ -61,13 +53,13 @@ main {
     padding: 20px;
     text-align: center;
     width: 90%; /* Adjust to fit within viewport */
-    max-height: 50%; /* Adjust based on preference */
+    max-height: 1000%; /* Adjust based on preference */
     position: fixed; /* Fix position */
-    bottom: 50px; /* Adjust to move textbox up */
+    bottom: 80px; /* Adjust to move textbox up */
     left: 50%;
     transform: translateX(-50%); /* Center horizontally */
     box-sizing: border-box;
-    overflow-y: auto; /* Add scroll if content overflows */
+    /* overflow-y: auto; Add scroll if content overflows */
     font-family: 'Beleren SmallCaps Bold', sans-serif;
     border-radius: 15px; /* Curved edges */
 }
@@ -79,51 +71,53 @@ button {
     margin: 10px;
     font-family: 'Beleren SmallCaps Bold', sans-serif;
     border-radius: 15px; /* Curved edges */
-}
-
-#result {
-    margin-bottom: 10px;
-    font-size: 20px;
+    position: fixed; /* Fix position */
 }
 
 /* Media query for small screens (portrait mode on phones) */
 @media only screen and (max-width: 767px) {
     button {
-        width: 90%;
-        font-size: 24px;
-        padding: 15px 0;
-        margin: 10px 0;
+        position: fixed; /* Fix position */
+        bottom: 20px; /* Move button up */
+        left: 50%;
+        transform: translateX(-50%); /* Center horizontally */
+        width: 80%; /* Adjust width */
     }
 }
 
 /* Media query for tablets and up */
-@media only screen and (min-width: 768px) {
-    header {
-        position: fixed; /* Ensure header is fixed on larger screens */
-    }
-
+@media only screen and (max-width: 768px) {
     .textbox {
         width: 80%;
-        padding: 20px;
-        max-height: 40%; /* Adjust based on preference */
+        padding: 30px;
+        max-height: 50%; /* Adjust based on preference */
+        margin-bottom: 20px; /* Add some extra space between the textbox and button */
     }
-
+    
     button {
-        font-size: 18px;
-        padding: 12px 24px;
-    }
-
-    #result {
-        font-size: 22px;
+        position: fixed; /* Fix position */
+        bottom: 20px; /* Move button up */
+        left: 50%;
+        transform: translateX(-50%); /* Center horizontally */
+        width: 80%; /* Adjust width */
     }
 }
 
+@media only screen and (orientation: landscape) {
+    .textbox {
+        width: 70%;
+        margin-bottom: 30px; /* Increase the space between textbox and button in landscape mode */
+    }
+    button {
+        position: fixed; /* Fix position */
+        bottom: 20px; /* Move button up */
+        left: 50%;
+        transform: translateX(-50%); /* Center horizontally */
+        width: 80%; /* Adjust width */
+    }
+}
 /* Media query for laptops/desktops and up */
 @media only screen and (min-width: 992px) {
-    header {
-        position: fixed; /* Ensure header is fixed on larger screens */
-    }
-
     .textbox {
         width: 60%;
         padding: 30px;
@@ -131,11 +125,8 @@ button {
     }
 
     button {
+        
         font-size: 20px;
         padding: 14px 28px;
-    }
-
-    #result {
-        font-size: 24px;
     }
 }

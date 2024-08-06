@@ -36,12 +36,10 @@ function generateNewCard() {
 
 // Function to toggle fullscreen mode
 function toggleFullscreen() {
-    if (!document.fullscreenElement) {
-        document.documentElement.requestFullscreen();
+    if (document.fullscreenElement) {
+        document.exitFullscreen();
     } else {
-        if (document.exitFullscreen) {
-            document.exitFullscreen();
-        }
+        document.documentElement.requestFullscreen();
     }
 }
 
