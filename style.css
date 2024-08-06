@@ -1,0 +1,133 @@
+/* Mobile first CSS */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('image2.jpg'); /* Replace with your image path */
+    background-size: cover; /* Ensures the background covers the element */
+    background-position: center top; /* Adjust to ensure Kenrith and name are visible */
+    background-repeat: no-repeat; /* Prevents image repetition */
+    background-attachment: fixed; /* Fixed background */
+    overflow: hidden; /* Prevent body scrolling */
+    color: white; /* Ensures text is readable against background */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Add background to make text readable */
+    padding: 10px 0; /* Adjust padding as needed */
+    z-index: 1000; /* Ensure header is on top */
+}
+
+header h1#card-name {
+    font-family: 'Beleren SmallCaps Bold', sans-serif;
+    margin: 0;
+    margin-top: 10px; /* Adjust to give more space for the header */
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 100px; /* Adjust to give more space for the header */
+}
+
+#card-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textbox {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    text-align: center;
+    width: 90%; /* Adjust to fit within viewport */
+    max-height: 50%; /* Adjust based on preference */
+    position: fixed; /* Fix position */
+    bottom: 50px; /* Adjust to move textbox up */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    box-sizing: border-box;
+    overflow-y: auto; /* Add scroll if content overflows */
+    font-family: 'Beleren SmallCaps Bold', sans-serif;
+    border-radius: 15px; /* Curved edges */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+    font-family: 'Beleren SmallCaps Bold', sans-serif;
+    border-radius: 15px; /* Curved edges */
+}
+
+#result {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+/* Media query for small screens (portrait mode on phones) */
+@media only screen and (max-width: 767px) {
+    button {
+        width: 90%;
+        font-size: 24px;
+        padding: 15px 0;
+        margin: 10px 0;
+    }
+}
+
+/* Media query for tablets and up */
+@media only screen and (min-width: 768px) {
+    header {
+        position: fixed; /* Ensure header is fixed on larger screens */
+    }
+
+    .textbox {
+        width: 80%;
+        padding: 20px;
+        max-height: 40%; /* Adjust based on preference */
+    }
+
+    button {
+        font-size: 18px;
+        padding: 12px 24px;
+    }
+
+    #result {
+        font-size: 22px;
+    }
+}
+
+/* Media query for laptops/desktops and up */
+@media only screen and (min-width: 992px) {
+    header {
+        position: fixed; /* Ensure header is fixed on larger screens */
+    }
+
+    .textbox {
+        width: 60%;
+        padding: 30px;
+        max-height: 50%; /* Adjust based on preference */
+    }
+
+    button {
+        font-size: 20px;
+        padding: 14px 28px;
+    }
+
+    #result {
+        font-size: 24px;
+    }
+}
