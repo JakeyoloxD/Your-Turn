@@ -48,7 +48,7 @@ let cardAbilities = ["Draw a card", "Create a treasure token", "Create 3 food to
     "Exchange control of target permanent you control and target permanent an opponent controls.",
     "Each player sacrifices a permanent at random.",
     "Each player exiles a card from their hand. At the beginning of the next end step, they put that card back into their hand.",
-    "Each player reveals the top card of their library. The player who reveals the card with the highest mana value puts that card into their hand and loses 5 life. Repeat this process.",
+    "Each player reveals the top card of their library. The player who reveals the card with the highest mana value puts that card into their hand and loses 5 life. You may repeat this process.",
     "Each player exiles all creatures they control, then returns them to the battlefield under a random player's control.",
     "At the beginning of each player's upkeep, they exile the top card of their library. They may play that card this turn.",
     "Each player exchanges their hand with the player to their left.",
