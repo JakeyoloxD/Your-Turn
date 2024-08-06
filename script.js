@@ -34,6 +34,17 @@ function generateNewCard() {
     document.getElementById("ability-text").value = getRandomCardAbility();
 }
 
+// Function to toggle fullscreen mode
+function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        }
+    }
+}
+
 // Generate initial card values when the page loads
 window.onload = generateNewCard;
 
