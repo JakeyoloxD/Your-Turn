@@ -1,6 +1,32 @@
 // Arrays of planechase card names, images, and abilities
-let cardNamesFirstPart = ["Reckless", "Wild", "Chaotic", "Demonic", "Corrupted", "Confusing", "Mystic", "Surprising", "Overwhelming"];
-let cardNamesSecondPart = ["Storm", "Tornado", "Explosion", "Massacre", "Encounter", "Surge", "Mischief", "Favour", "Mind"];
+let cardNamesFirstPart = [
+    "Reckless", "Wild", "Chaotic", "Demonic", "Corrupted", "Confusing", 
+    "Mystic", "Surprising", "Overwhelming", "Furious", "Haunted", "Enigmatic", 
+    "Blazing", "Ruthless", "Savage", "Unpredictable", "Shadowy", "Thunderous",
+    "Ferocious", "Vengeful", "Arcane", "Brutal", "Malevolent", "Sinister", 
+    "Cunning", "Infernal", "Raging", "Treacherous", "Wicked", "Abyssal", 
+    "Celestial", "Frenzied", "Ethereal", "Grim", "Unholy", "Necrotic",
+    "Spectral", "Dreadful", "Eldritch", "Phantasmal", "Vile", "Insidious", 
+    "Fateful", "Destructive", "Malicious", "Cryptic", "Formidable", "Vindictive",
+    "Maleficent", "Dire", "Mysterious", "Forbidden", "Volatile", "Wraithlike",
+    "Malevolous", "Baneful", "Ruinous", "Tenebrous", "Spectral", "Ghoulish",
+    "Baleful", "Perilous", "Frightful", "Menacing", "Dark", "Savage",
+    "Hostile", "Lurking", "Arcane", "Ominous", "Pernicious"
+];
+let cardNamesSecondPart = [
+    "Storm", "Tornado", "Explosion", "Massacre", "Encounter", "Surge", 
+    "Mischief", "Favour", "Mind", "Wrath", "Tempest", "Fury", 
+    "Cataclysm", "Spectacle", "Havoc", "Whirlwind", "Blitz", "Onslaught",
+    "Inferno", "Eruption", "Calamity", "Revelation", "Upheaval", "Assault",
+    "Ambush", "Ambition", "Scheme", "Chaos", "Annihilation", "Ascendance",
+    "Conflagration", "Insurrection", "Maelstrom", "Tumult", "Devastation", 
+    "Apocalypse", "Vortex", "Paradox", "Desolation", "Exodus", "Maelstrom",
+    "Catastrophe", "Oblivion", "Dominion", "Pandemonium", 
+    "Uprising", "Convulsion", "Tyranny", "Deception", "Vengeance", "Hysteria",
+    "Eclipse", "Doom", "Anarchy", "Cataclysm", "Despair", "Paroxysm",
+    "Transgression", "Specter", "Obsession", "Enigma", "Mayhem", "Rapture",
+    "Surreption", "Delerium", "Rebellion", "Eradication", "Murder"
+];
 let cardImages = ["image1.jpg", "image2.jpg", "image3.jpg"];
 let cardAbilities = ["Draw a card", "Create a treasure token", "Create 3 food tokens", "Play an extra land this turn", "Create 3 Soldier tokens", "Destroy all creatures on the battlefield", "Reduce the cost of spells this turn to zero", "Draw 5 cards", "Each player discards their hand and draws 7 cards",
     "Search your library for a basic land card and put it into play tapped", "You may take an extra turn after this one, if you do, you lose the game at the next endstep", "Each player gains 10 life", "Target player takes control of your turn, you gain control of their next turn.",
