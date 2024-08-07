@@ -83,6 +83,27 @@ button {
     transform: translateX(-50%); /* Center horizontally */
     width: 80%; /* Adjust width */
 }
+/* Button hover state */
+button:hover {
+    background-color: #0056b3; /* Change background color on hover */
+}
+
+/* Button active state */
+button:active {
+    background-color: #004080; /* Change background color when pressed */
+    border-radius: 15px; /* Ensure curved edges are applied */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for pressed effect */
+}
+#broken-video {
+    display: none; /* Hidden by default */
+    position: fixed; /* Ensure it's positioned on top */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    object-fit: cover; /* Cover the whole screen */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
 
 /* Media query for small screens (portrait mode on phones) */
 @media only screen and (max-width: 767px) {

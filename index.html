@@ -4,6 +4,18 @@
     <title>Your Turn</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/@saeris/typeface-beleren-bold@latest/index.css" rel="stylesheet" type="text/css" />
+    <style>
+        #broken-video {
+            display: none; /* Hidden by default */
+            position: absolute; /* Ensure it's visible on top */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Cover the whole screen */
+            z-index: 1000; /* Ensure it appears above other elements */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -14,6 +26,11 @@
             <textarea id="ability-text" class="textbox" readonly></textarea>
             <button id="new-plane-button">Your Turn!</button>
         </div>
+        <!-- Add video element here -->
+        <video id="broken-video" autoplay muted>
+            <source src="./broken.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
     </main>
     <script src="script.js"></script>
 </body>

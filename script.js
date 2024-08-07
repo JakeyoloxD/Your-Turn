@@ -161,7 +161,7 @@ function toggleFullscreen() {
 
 // Variables to manage rate-limiting
 let lastClickTime = 0;
-const clickThreshold = 40; // Number of clicks to trigger the lock
+const clickThreshold = 20; // Number of clicks to trigger the lock
 const lockDuration = 5000; // Duration in milliseconds (5 seconds)
 let clickCount = 0;
 let isLocked = false;
@@ -183,11 +183,13 @@ function handleYourTurnClick() {
     lastClickTime = now;
 
     if (clickCount >= clickThreshold) {
-        // Lock the button, show the message, and disable it
+        // Lock the button, show the message, disable it, and display the video
         isLocked = true;
         const button = document.getElementById("new-plane-button");
+        const video = document.getElementById("broken-video");
         button.textContent = "YOU BROKE THE APP";
         button.disabled = true;
+        video.style.display = "block"; // Show the video
 
         // Play explosion sound
         let audio = new Audio('explosion.mp3');
@@ -199,6 +201,7 @@ function handleYourTurnClick() {
             clickCount = 0;
             button.textContent = "Your Turn!";
             button.disabled = false;
+            video.style.display = "none"; // Hide the video
         }, lockDuration);
     } else {
         // Vibrate the device for 200 milliseconds
