@@ -8,10 +8,10 @@ let cardNamesFirstPart = [
     "Celestial", "Frenzied", "Ethereal", "Grim", "Unholy", "Necrotic",
     "Spectral", "Dreadful", "Eldritch", "Phantasmal", "Vile", "Insidious", 
     "Fateful", "Destructive", "Malicious", "Cryptic", "Formidable", "Vindictive",
-    "Maleficent", "Dire", "Mysterious", "Forbidden", "Volatile", "Wraithlike",
-    "Malevolous", "Baneful", "Ruinous", "Tenebrous", "Spectral", "Ghoulish",
+    "Maleficent", "Dire", "Mysterious", "Forbidden", "Volatile", 
+    "Malevolous", "Baneful", "Ruinous", "Spectral", "Ghoulish",
     "Baleful", "Perilous", "Frightful", "Menacing", "Dark", "Savage",
-    "Hostile", "Lurking", "Arcane", "Ominous", "Pernicious"
+    "Hostile", "Lurking", "Arcane", "Ominous"
 ];
 let cardNamesSecondPart = [
     "Storm", "Tornado", "Explosion", "Massacre", "Encounter", "Surge", 
