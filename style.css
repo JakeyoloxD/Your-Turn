@@ -84,7 +84,7 @@ button {
     width: 80%; /* Adjust width */
 }
 
-#broken-video {
+#broken-image {
     display: none; /* Hidden by default */
     position: fixed; /* Ensure it's positioned on top */
     top: 0;
