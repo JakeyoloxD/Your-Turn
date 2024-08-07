@@ -159,8 +159,23 @@ function toggleFullscreen() {
     }
 }
 
+// Function to handle "Your Turn!" button click
+function handleYourTurnClick() {
+    // Vibrate the device for 200 milliseconds
+    if (navigator.vibrate) {
+        navigator.vibrate(200);
+    }
+
+    // Play the tap sound effect
+    let audio = new Audio('tap.wav');
+    audio.play();
+}
+
 // Generate initial card values when the page loads
 window.onload = generateNewCard;
 
 // Event listener for the new plane button
-document.getElementById("new-plane-button").addEventListener("click", generateNewCard);
+document.getElementById("new-plane-button").addEventListener("click", () => {
+    generateNewCard();
+    handleYourTurnClick();
+});
