@@ -159,16 +159,57 @@ function toggleFullscreen() {
     }
 }
 
+// Variables to manage rate-limiting
+let lastClickTime = 0;
+const clickThreshold = 40; // Number of clicks to trigger the lock
+const lockDuration = 5000; // Duration in milliseconds (5 seconds)
+let clickCount = 0;
+let isLocked = false;
+
 // Function to handle "Your Turn!" button click
 function handleYourTurnClick() {
-    // Vibrate the device for 200 milliseconds
-    if (navigator.vibrate) {
-        navigator.vibrate(200);
+    if (isLocked) {
+        return;
     }
 
-    // Play the tap sound effect
-    let audio = new Audio('tap.mp3');
-    audio.play();
+    clickCount++;
+    const now = Date.now();
+
+    if (now - lastClickTime > 1000) {
+        // Reset click count if last click was more than 1 second ago
+        clickCount = 1;
+    }
+
+    lastClickTime = now;
+
+    if (clickCount >= clickThreshold) {
+        // Lock the button, show the message, and disable it
+        isLocked = true;
+        const button = document.getElementById("new-plane-button");
+        button.textContent = "YOU BROKE THE APP";
+        button.disabled = true;
+
+        // Play explosion sound
+        let audio = new Audio('explosion.mp3');
+        audio.play();
+
+        // Re-enable the button after the lock duration
+        setTimeout(() => {
+            isLocked = false;
+            clickCount = 0;
+            button.textContent = "Your Turn!";
+            button.disabled = false;
+        }, lockDuration);
+    } else {
+        // Vibrate the device for 200 milliseconds
+        if (navigator.vibrate) {
+            navigator.vibrate(200);
+        }
+
+        // Play the tap sound effect
+        let audio = new Audio('tap.mp3');
+        audio.play();
+    }
 }
 
 // Generate initial card values when the page loads
