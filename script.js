@@ -167,7 +167,7 @@ function handleYourTurnClick() {
     }
 
     // Play the tap sound effect
-    let audio = new Audio('tap.wav');
+    let audio = new Audio('tap.mp3');
     audio.play();
 }
 
