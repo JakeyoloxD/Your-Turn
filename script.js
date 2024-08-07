@@ -19,13 +19,13 @@ let cardNamesSecondPart = [
     "Cataclysm", "Spectacle", "Havoc", "Whirlwind", "Blitz", "Onslaught",
     "Inferno", "Eruption", "Calamity", "Revelation", "Upheaval", "Assault",
     "Ambush", "Ambition", "Scheme", "Chaos", "Annihilation", "Ascendance",
-    "Conflagration", "Insurrection", "Maelstrom", "Tumult", "Devastation", 
+    "Conflagration", "Insurrection", "Maelstrom", "Devastation", 
     "Apocalypse", "Vortex", "Paradox", "Desolation", "Exodus", "Maelstrom",
     "Catastrophe", "Oblivion", "Dominion", "Pandemonium", 
     "Uprising", "Convulsion", "Tyranny", "Deception", "Vengeance", "Hysteria",
-    "Eclipse", "Doom", "Anarchy", "Cataclysm", "Despair", "Paroxysm",
+    "Eclipse", "Doom", "Anarchy", "Cataclysm", "Despair",
     "Transgression", "Specter", "Obsession", "Enigma", "Mayhem", "Rapture",
-    "Surreption", "Delerium", "Rebellion", "Eradication", "Murder"
+    "Delerium", "Rebellion", "Eradication", "Murder"
 ];
 let cardImages = ["image1.jpg", "image2.jpg", "image3.jpg"];
 let cardAbilities = ["Draw a card", "Create a treasure token", "Create 3 food tokens", "Play an extra land this turn", "Create 3 Soldier tokens", "Destroy all creatures on the battlefield", "Reduce the cost of spells this turn to zero", "Draw 5 cards", "Each player discards their hand and draws 7 cards",
