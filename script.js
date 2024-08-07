@@ -65,7 +65,7 @@ let cardAbilities = ["Draw a card", "Create a treasure token", "Create 3 food to
     "Each player loses 2 life and draws two cards.", 
     "Return target card from your graveyard to the battlefield.", 
     "Each player creates a 1/1 blue Faerie token with flying.",
-    "Each player takes 2 damage whenever they play a land.",
+    "Each player takes 2 damage whenever they play a land until your next turn.",
     "Target opponent gains control of target permanent you control.",
     "Exile a creature you control, then return it to the battlefield under its owner's control.",
     "Each player shuffles their hand and graveyard into their library, then draws that many cards.",
