@@ -7,7 +7,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url('image2.jpg'); /* Replace with your image path */
+    background-image: url('image2.jpg'); 
     background-size: cover; /* Ensures the background covers the element */
     background-position: center top; /* Adjust to ensure Kenrith and name are visible */
     background-repeat: no-repeat; /* Prevents image repetition */

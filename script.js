@@ -54,7 +54,7 @@ let cardAbilities = ["Draw a card", "Create a treasure token", "Create 3 food to
     "Each player exchanges their hand with the player to their left.",
     "Whenever a player casts a spell, they exile the top card of their library. If it's a nonland card, they may cast it without paying its mana cost.",
     "Each player exiles a permanent they control, then returns it to the battlefield under its owner's control at the beginning of the next end step.",
-    "Each player reveals the top card of their library. The player with the lowest mana value among revealed cards gains control of the revealed cards until end of turn.",
+    "Each player reveals the top card of their library. The player with the lowest mana value among revealed cards may cast them until end of turn without paying their mana cost.",
     "Each player creates a token that's a copy of target creature an opponent controls.",
     "Each player returns a land they control to its owner's hand, then draws a card.",
     "Each player reveals the top three cards of their library, puts one into their hand, and exiles the rest.",
@@ -91,6 +91,12 @@ function getRandomCardName() {
 // Function to generate a random card image URL
 function getRandomCardImage() {
     return cardImages[Math.floor(Math.random() * cardImages.length)];
+}
+
+// Function to change the background image
+function changeBackgroundImage() {
+    let randomImage = getRandomCardImage();
+    document.body.style.backgroundImage = `url('${randomImage}')`;
 }
 
 // Function to generate a random card ability text
