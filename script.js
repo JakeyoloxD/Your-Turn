@@ -78,19 +78,19 @@ let cardAbilities = ["Draw a card", "Create a treasure token", "Create 3 food to
     "Each player exiles all creatures they control, then returns them to the battlefield under a random player's control.",
     "At the beginning of each player's upkeep, they exile the top card of their library. They may play that card this turn.",
     "Each player exchanges their hand with the player to their left.",
-    "Whenever a player casts a spell, they exile the top card of their library. If it's a nonland card, they may cast it without paying its mana cost.",
+    "Until your next upkeep, whenever a player casts a spell, they exile the top card of their library. If it's a nonland card, they may cast it without paying its mana cost.",
     "Each player exiles a permanent they control, then returns it to the battlefield under its owner's control at the beginning of the next end step.",
     "Each player reveals the top card of their library. The player with the lowest mana value among revealed cards may cast them until end of turn without paying their mana cost.",
     "Each player creates a token that's a copy of target creature an opponent controls.",
     "Each player returns a land they control to its owner's hand, then draws a card.",
+    "Create a 0/30 Wall creature token with Defender and the ability 'All damage dealt to this creature's controller is instead dealt to this creature in the form of wither counters (-1/-1). Whenever this creature is destroyed, each opponent draws cards equal to the amount of damage they dealt to it.'",
     "Each player reveals the top three cards of their library, puts one into their hand, and exiles the rest.",
     "Each player discards a card, then draws a card. If a player can't discard a card, they lose 3 life.",
     "Each player gains control of target nonland permanent an opponent controls chosen at random.",
     "Each player mills a card, then creates a token that's a copy of a creature card milled this way.",
     "Each player exiles all cards from their hand face down, then draws that many cards. At the beginning of the next end step, each player discards their hand and returns the exiled cards to their hand.",
     "Each player flips a coin. Each player whose coin comes up tails sacrifices a permanent they control.",
-    "Each player exchanges control of all artifacts they control with the player to their right.",
-    "Each player puts all nonland permanents they control on the bottom of their library in a random order, then reveals that many cards from the top of their library. They put all creature and land cards revealed this way onto the battlefield and the rest into their hand.",
+    "Each player exchanges control of all artifacts they control with the player to their right.",    
     "Each player discards their hand, then draws a card for each card discarded this way.",
     "Each player chooses a creature they control. Exile those creatures, then return them to the battlefield under their owners' control.",
     "Each player creates a token that's a copy of target artifact an opponent controls.",
@@ -104,7 +104,8 @@ let cardAbilities = ["Draw a card", "Create a treasure token", "Create 3 food to
     "Each player sacrifices all creatures they control, then creates that many 2/2 black Zombie creature tokens.",
     "Each player chooses a number between 1 and 5. Each player takes damage equal to their chosen number times 3. The player or players who chose the highest number, may draw three cards.",
     "Each player flips a coin until they lose a flip. For each flip they win, they draw a card. For each flip they lose, they discard a card.",
-    "Each player exchanges their library with another player's chosen at random. Each player shuffles their new library."
+    "Each player exchanges their library with another player's chosen at random. Each player shuffles their new library. At the beginning of your next upkeep, return libraries to their owners.",
+    "All spells in each player's hand have 'Flash' until the end of the turn."
 ];
 
 // Function to generate a random card name
