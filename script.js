@@ -139,7 +139,7 @@ function adjustFontSize(textElement) {
     } else if (textLength < 200) {
         textElement.style.fontSize = "1.5em"; // Medium font for moderate text
     } else {
-        textElement.style.fontSize = "1em"; // Smaller font for long text
+        textElement.style.fontSize = "1.1em"; // Smaller font for long text
     }
 }
 
